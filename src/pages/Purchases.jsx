@@ -25,7 +25,7 @@ function Purchases() {
   },[])
 
   return (
-    <main className='px-2 max-w-[1200px] mx-auto mt-[100px]'>
+    <main className='px-2 max-w-[1200px] mx-auto mt-[120px]'>
 
       <section className='flex gap-2 items-center my-2'>
 
