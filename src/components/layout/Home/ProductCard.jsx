@@ -48,7 +48,7 @@ function ProductCard({product}) {
 
   return (
 
-    <Link to={`/products/${product.id}`} className='border-[1px] border-gray-200 min-[580px]:w-[240px] min-[770px]:w-[300px]'>
+    <Link to={`/products/${product.id}`} className='hover:bg-gray-100/70 border-[1px] border-gray-200 min-[580px]:w-[240px] min-[770px]:w-[300px]'>
 
 
         {/* imagen  */}
