@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { axiosEcomeerce, getConfig } from "../../utils/configAxios";
 import { loginUser } from "./userInfo.slice";
+import Swal from "sweetalert2";
 
 
 const initialState = {
@@ -44,12 +45,17 @@ export const setNewUser = (data,navigate) => (dispatch) =>{
 
     axiosEcomeerce.post('users', data, getConfig())
     .then((res)=>{
+        Swal.fire('You created the user successfully!')
         navigate('/login')
         console.log(res.data)
+        
+       
         dispatch(loginUser({email: data.email, password: data.password}))
     
     })
-    .catch(err=>console.log(err))
+    .catch(err=>{
+        Swal.fire(err.response.data.error)
+        console.log(err)})
 
 
 }

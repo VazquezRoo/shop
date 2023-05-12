@@ -38,9 +38,9 @@ export const loginUser =  (data) => (dispatch) => {
 
     axiosEcomeerce.post('users/login', data)
         .then((res)=> dispatch(setUserInfo(res.data)))
-        .catch((data)=>{
-            Swal.fire('Invalid credentials')
-            console.log(data)})
+        .catch((err)=>{
+            Swal.fire(err.response.data.error)
+            console.log(err)})
 }
 
 export default userInfoSlice.reducer;

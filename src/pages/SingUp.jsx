@@ -29,8 +29,6 @@ function SingUp() {
 
             dispatch(setNewUser(data, navigate))
     
-    
-            Swal.fire('You created the user successfully!')
          }
          else{
             dispatch(updateUser(user.id))
