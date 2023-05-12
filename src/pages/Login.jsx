@@ -77,7 +77,7 @@ function Login() {
             <h3 className='capitalize'>{user?.firstName + ' ' +  user?.lastName}</h3>
             <button onClick={handleCLickLogOut} className='bg-red-500 text-white py-2 rounded-md w-full block'>Log out</button>
 
-            <div className='mt-[10px] grid justify-end w-full'>
+            <div className='mt-[15px] grid justify-end w-full'>
             <p onClick={changeModal} className='pr-[5px] flex '>
               {
                 !modal?<p className='text-[15px] text-black/40'>Show less</p>:<p className='text-[15px] text-black/40 '>Show more</p>

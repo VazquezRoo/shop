@@ -111,9 +111,9 @@ function ProductDetail({productId}) {
     <>
     <section className='flex gap-2 items-center p-4'>
 
-        <Link to={'/'}>Home</Link>
+        {/* <Link to={'/'}>Home</Link>
         <div className='h-[5px] aspect-square rounded-full bg-red-500'></div>
-        <span className=' font-bold'>{productData?.title}</span>
+        <span className=' font-bold'>{productData?.title}</span> */}
 
     </section>
     <section className='grid gap-6 min-[770px]:grid-cols-2 sm:items-center max-w-[1200px] marker: px-4 min-[770px]:grid-rows-[auto]'>
