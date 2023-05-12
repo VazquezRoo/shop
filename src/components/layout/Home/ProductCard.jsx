@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { addProductCart } from '../../../store/slices/cart.slice'
 import Swal from 'sweetalert2'
 
@@ -9,6 +9,9 @@ function ProductCard({product}) {
     const dispatch = useDispatch()
 
    const {products} =  useSelector(store=>store.cart)
+   const {token} =  useSelector(store=>store.userInfo)
+   const navigate = useNavigate()
+
 
 
    const productsAlert = {}
@@ -20,11 +23,18 @@ function ProductCard({product}) {
     const handleClickAddProduct = (e)=>{
         e.preventDefault()
         
+
+        if(token){
         if(productsAlert[product.id] >= 1){
             showAlert()
         }
         else{
-        dispatch(addProductCart({productId: product.id, quantity: 1}))}      
+        dispatch(addProductCart({productId: product.id, quantity: 1}))}  
+        }
+        else{
+            Swal.fire('Login to add products to cart')
+            navigate('/login')
+        }    
     }
 
     useEffect(()=>{

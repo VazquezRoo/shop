@@ -87,7 +87,7 @@ function Login() {
            </div>
             
 
-            <section className={` overflow-hidden absolute top-[440px] gap-6 grid p-2 ${!modal? 'h-[200px] mt-[20px]':'h-[0] top-[400px]'} bg-white w-[300px] min-[600px]:w-[400px] min-[600px]:px-16 duration-1000 `}>
+            <section className={` overflow-hidden absolute top-[440px] gap-6 grid p-2 ${!modal? 'h-[200px] mt-[20px]':'h-[0] top-[300px]'} bg-white w-[300px] min-[600px]:w-[400px] min-[600px]:px-16 duration-1000 `}>
               <p>Name: <span className='pl-10'>{userLogin.firstName + ' ' + userLogin.lastName}</span></p>
               <p>Email: <span className='pl-10'>{userLogin.email}</span></p>
               {
