@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { axiosEcomeerce } from "../../utils/configAxios";
+import Swal from "sweetalert2";
 
 
 const initialState = {
@@ -37,7 +38,9 @@ export const loginUser =  (data) => (dispatch) => {
 
     axiosEcomeerce.post('users/login', data)
         .then((res)=> dispatch(setUserInfo(res.data)))
-        .catch((data)=>console.log(data))
+        .catch((data)=>{
+            Swal.fire('Invalid credentials')
+            console.log(data)})
 }
 
 export default userInfoSlice.reducer;
