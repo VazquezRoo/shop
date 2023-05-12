@@ -14,8 +14,10 @@ function Login() {
   // const [modalEdit, setModalEdit] = useState(true)
   const [showError, setShowError] = useState(true)
 
-  const {register, handleSubmit,  formState:{errors}} = useForm()
+  const {register, handleSubmit, formState:{errors}} = useForm()
   const dispatch = useDispatch()
+
+  console.log(errors)
 
 
 
@@ -141,6 +143,7 @@ function Login() {
             <label htmlFor="password"> Password </label>
             <input className='border-[1px] border-gray-300 p-1 outline-none' id='password' type="password"  {...register('password',{required:true})} />
           </div>
+          {/* <span className="text-[10px]  text-red-500">{errors.lastName && errors.lastName.message}</span> */}
     
           <button className='block w-full py-2 bg-red-500 text-white hover:bg-red-600 transition-colors'>Login</button>
           <span className={`text-red-500 ${showError? 'opacity-0':'opacity-100'}`}>Invalid credentials</span>

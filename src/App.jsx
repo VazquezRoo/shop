@@ -13,7 +13,7 @@ import SingUp from './pages/SingUp'
 function App() {
 
   return (
-    <section className='relative grid justify-items-center min-h-screen font-["yantramanav"]'>
+    <section className='relative grid justify-items-center min-h-screen font-["yantramanav"] '>
 
       <Header/>
 
