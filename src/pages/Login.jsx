@@ -77,7 +77,7 @@ function Login() {
             <h3 className='capitalize'>{user?.firstName + ' ' +  user?.lastName}</h3>
             <button onClick={handleCLickLogOut} className='bg-red-500 text-white py-2 rounded-md w-full block'>Log out</button>
 
-            <div className='mt-[15px] grid justify-end w-full'>
+            <div className='mt-[10px] grid justify-end w-full'>
             <p onClick={changeModal} className='pr-[5px] flex '>
               {
                 !modal?<p className='text-[15px] text-black/40'>Show less</p>:<p className='text-[15px] text-black/40 '>Show more</p>
@@ -87,7 +87,7 @@ function Login() {
            </div>
             
 
-            <section className={` overflow-hidden absolute top-[420px] gap-6 grid p-2 ${!modal? 'h-[200px] mt-[20px]':'h-[0]'} bg-white w-[300px] min-[600px]:w-[400px] min-[600px]:px-16 duration-1000 `}>
+            <section className={` overflow-hidden absolute top-[440px] gap-6 grid p-2 ${!modal? 'h-[200px] mt-[20px]':'h-[0] top-[400px]'} bg-white w-[300px] min-[600px]:w-[400px] min-[600px]:px-16 duration-1000 `}>
               <p>Name: <span className='pl-10'>{userLogin.firstName + ' ' + userLogin.lastName}</span></p>
               <p>Email: <span className='pl-10'>{userLogin.email}</span></p>
               {
