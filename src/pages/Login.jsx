@@ -21,11 +21,9 @@ function Login() {
 
   const {token, user} = useSelector(store => store.userInfo) //Traer estados globales
   const {edit} = useSelector(store => store.createUser)
-  console.log(user)
-  console.log(edit)
+ 
 
   const submit = (data) =>{
-    console.log(data)
     dispatch(loginUser(data))  
   }
 
@@ -98,7 +96,7 @@ function Login() {
 
               {/* <Link to={'/singUp'} onClick={handleChangeToEditUser} className='bg-red-500 rounded-full h-[30px] w-[30px] text-center justify-self-end text-white hover:bg-red-400 grid items-center'><i class='bx bx-pencil pb-[1px]'></i></Link> */}
 
-              <Link to={'/'} onClick={handleCLickDeleteUser} className='bg-red-500 rounded-full h-[30px] w-[30px] text-center justify-self-end text-white hover:bg-red-400 grid items-center'><i class='bx bx-trash pb-[1px]'></i></Link>
+              <Link to={'/'} onClick={handleCLickDeleteUser} className='bg-red-500 rounded-full h-[30px] w-[30px] text-center justify-self-end text-white hover:bg-red-400 grid items-center'><i className='bx bx-trash pb-[1px]'></i></Link>
 
               
               </div>

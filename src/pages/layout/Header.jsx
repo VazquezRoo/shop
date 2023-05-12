@@ -15,7 +15,6 @@ function Header() {
   products.map(product=>  counter = counter + product.quantity)
 
  
-  console.log(counter)
 
   const dispatch = useDispatch()
   const navigate = useNavigate()

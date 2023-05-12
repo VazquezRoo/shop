@@ -29,9 +29,6 @@ function Home() {
         setPriceMin(Number(e.target.min.value))
         setPriceMax(Number(e.target.max.value))
 
-        
-        console.log(priceMin)
-        console.log(priceMax)
 
         
     }
@@ -146,9 +143,6 @@ function Home() {
         setModalFilter(!modalFilter)
     }
 
-    const handleClickShowModalFilterOff = () =>{
-        setModalFilter(false)
-    }
 
   return (
     <main  className='p-2 mt-[120px] flex flex-col justify-center items-center min-[990px]:flex-row relative'>
@@ -171,7 +165,7 @@ function Home() {
         
         
         <div className='w-[100%] flex justify-end mx-auto pt-3 gap-3 cursor-pointer min-[990px]:absolute min-[990px]:invisible min-[990px]:opacity-100 min-[990px]:left-0 '>
-        <i  onClick={handleClickShowModalFilter} class='bx bx-filter-alt text-[25px] text-black/30'></i>
+        <i  onClick={handleClickShowModalFilter} className='bx bx-filter-alt text-[25px] text-black/30'></i>
         <p onClick={handleClickShowModalFilter} className='text-[15px] text-black/30'>Filters</p>
         </div>
 
