@@ -91,7 +91,7 @@ function Login() {
               <p>Name: <span className='pl-10'>{userLogin.firstName + ' ' + userLogin.lastName}</span></p>
               <p>Email: <span className='pl-10'>{userLogin.email}</span></p>
               {
-                userLogin.phone?<p>Phone: {userLogin.phone}</p>: <p>Phone: <span className='text-center pl-10'>----</span></p>
+                userLogin.phone?<p className='pl-10'>Phone: {userLogin.phone}</p>: <p>Phone: <span className='text-center pl-10'>----</span></p>
               }
 
               <div className='flex gap-2 justify-end'>
