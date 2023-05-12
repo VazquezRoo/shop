@@ -48,14 +48,14 @@ function SingUp() {
 
         
         
-        <form to='/' onSubmit={handleSubmit(submit)} action="" className='text-black/80 w-[90%] max-w-[400px] p-6 bg-white grid gap-2'>
+        <form to='/' onSubmit={handleSubmit(submit)} action="" className='text-black/80 w-[90%] max-w-[400px] p-6 bg-white grid gap-2 mt-[50px]'>
             <h4 className='text-[25px]'>{edit? 'Sing Up': 'Update'}</h4>
             <div className='grid h-[80px]'>
 
                 <label htmlFor="">Email</label>
-                <input type="email" className='pl-2 h-[31px] outline-none border-[1px] border-black/20 rounded-sm text-[20px]' {...register('email', 
+                <input type="email" placeholder='example@gmail.com' className='pl-2 h-[31px] outline-none border-[1px] border-black/20 rounded-sm text-[20px]' {...register('email', 
                 {
-                    required:'Este campo es requerido', 
+                    required:'Required', 
                    
                     }
                 )} />
@@ -66,7 +66,7 @@ function SingUp() {
                 <label htmlFor="">First Name</label>
                 <input type="text"  className='pl-2 h-[31px] outline-none border-[1px] border-black/20 rounded-sm text-[20px]' {...register('firstName',
                 {
-                    required:'Este campo es requerido', 
+                    required:'Required', 
                   
                     }
                 )}/>
@@ -77,7 +77,7 @@ function SingUp() {
                 <label htmlFor="">Last Name</label>
                 <input type="text" className='pl-2 h-[31px] outline-none border-[1px] border-black/20 rounded-sm text-[20px]' {...register('lastName',
                 {
-                    required:'Este campo es requerido', 
+                    required:'Required', 
                    
                     }
                 )}/>
@@ -88,13 +88,13 @@ function SingUp() {
                 <label htmlFor="">Password</label>
                 <input type="password" className='h-[31px] pl-2 outline-none border-[1px] border-black/20 rounded-sm text-[20px]'{...register('password',
                 {
-                    required:'Este campo es requerido', 
+                    required:'Required', 
                     minLength:{
                       value:3,
-                      message:'Minimo 3 caracteres'},
+                      message:'at least 3 characters'},
                     maxLength:{
                       value:12,
-                      message:'Maximo 12 caracteres'}
+                      message:'max 12 characters'}
                     }
                 )} />
                 <span className="text-[10px] text-red-500">{errors.password && errors.password.message}</span>
