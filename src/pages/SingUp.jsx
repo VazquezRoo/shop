@@ -30,12 +30,12 @@ function SingUp() {
             dispatch(setNewUser(data, navigate))
     
     
-            Swal.fire('Creaste el usuario con exito!')
+            Swal.fire('You created the user successfully!')
          }
          else{
             dispatch(updateUser(user.id))
 
-            Swal.fire('Se edito correctamente el usuario!')
+            Swal.fire('The user was edited correctly!')
          }
 
     }

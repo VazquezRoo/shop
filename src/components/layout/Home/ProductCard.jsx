@@ -32,7 +32,7 @@ function ProductCard({product}) {
     },[])
 
     const showAlert = () => {
-        Swal.fire('Este producto ya esta en el carrito')
+        Swal.fire('This product is already in the cart')
     }
 
 

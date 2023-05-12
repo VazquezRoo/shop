@@ -12,10 +12,10 @@ function Cart() {
     dispatch(purchaseCart())
     dispatch(changeIsShowCart())
     
-      Swal.fire('Se realizo la compra satisfactoriamente')
+      Swal.fire('Your purchase was successful!')
     }
     else{
-      Swal.fire('Agregue productos al carrito')
+      Swal.fire('Add products to cart')
       dispatch(changeIsShowCart())
     }
 

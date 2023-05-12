@@ -30,10 +30,10 @@ function Header() {
   }
 
   return (
-    <section className='flex fixed h-[60px] justify-between items-center w-full top-0 px-6 bg-white z-[100] min-[990px]:border-b-[1px] border-black/20 max-w-[1300px] min-[1300px]:border-r-[1px] min-[1300px]:border-l-[1px]'>
+    <section className='flex  fixed h-[60px] justify-between items-center w-full top-0 px-6 bg-white z-[100] min-[990px]:border-b-[1px] border-black/20 max-w-[1300px] min-[1300px]:border-r-[1px] min-[1300px]:border-l-[1px]'>
 
             <Link to="/">
-                <h3 className='text-[25px] text-red-500 min-[990px]:text-[30px]'><b>e-commerce</b> </h3>
+                <h3 className='text-[25px] text-red-500 min-[990px]:text-[30px]'><b>Vazquez-shop</b> </h3>
             </Link>
 
         <nav className='text-[24px] grid grid-cols-3 gap-4 text-black/40 w-[40%] pr-2  h-[100%] items-center '>

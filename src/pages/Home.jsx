@@ -157,7 +157,7 @@ function Home() {
 
          {/* Lista de categorias de productos */}
          
-         <div className= {`fixed z-[200] top-0 ri duration-1000 ${modalFilter? 'right-0': '-right-full'} min-[990px]:relative min-[990px]:left-0 self-start min-[990px]:right-auto`}>
+         <div className= {`fixed z-[200] top-0  duration-1000 ${modalFilter? 'right-0': '-right-full'} min-[990px]:relative min-[990px]:left-0 self-start min-[990px]:right-auto min-[990px]:z-0`}>
             <ModalFilter categories={categories} handleClickShowModalFilter={handleClickShowModalFilter} handleClickCategory={handleClickCategory} products={products} handleSubmit={handleSubmit} />
         </div>
         <div>

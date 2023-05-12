@@ -10,7 +10,7 @@ import Swal from 'sweetalert2'
 function Login() {
 
   const [userLogin, setUserLogin] = useState([])
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(true)
   // const [modalEdit, setModalEdit] = useState(true)
   const [showError, setShowError] = useState(true)
 
@@ -39,7 +39,7 @@ function Login() {
     
     dispatch(deleteUser(userLogin.id))
     dispatch(logOut())
-    Swal.fire('Se elimino correctamente el usuario!')
+    Swal.fire('The user was successfully deleted!')
   
   }
 
@@ -80,7 +80,7 @@ function Login() {
             <div className='mt-[10px] grid justify-end w-full'>
             <p onClick={changeModal} className='pr-[5px] flex '>
               {
-                modal?<p className='text-[15px] text-black/40'>Show less</p>:<p className='text-[15px] text-black/40 '>Show more</p>
+                !modal?<p className='text-[15px] text-black/40'>Show less</p>:<p className='text-[15px] text-black/40 '>Show more</p>
               }
               <i className={`bx bx-chevron-down text-[25px] text-black/70 cursor-pointer duration-1000 ${modal?'rotate-0': 'rotate-180'}`}></i></p>
             </div>
@@ -96,7 +96,7 @@ function Login() {
 
               <div className='flex gap-2 justify-end'>
 
-              <Link to={'/singUp'} onClick={handleChangeToEditUser} className='bg-red-500 rounded-full h-[30px] w-[30px] text-center justify-self-end text-white hover:bg-red-400 grid items-center'><i class='bx bx-pencil pb-[1px]'></i></Link>
+              {/* <Link to={'/singUp'} onClick={handleChangeToEditUser} className='bg-red-500 rounded-full h-[30px] w-[30px] text-center justify-self-end text-white hover:bg-red-400 grid items-center'><i class='bx bx-pencil pb-[1px]'></i></Link> */}
 
               <Link to={'/'} onClick={handleCLickDeleteUser} className='bg-red-500 rounded-full h-[30px] w-[30px] text-center justify-self-end text-white hover:bg-red-400 grid items-center'><i class='bx bx-trash pb-[1px]'></i></Link>
 
