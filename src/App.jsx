@@ -9,11 +9,12 @@ import NotFound from './NotFound'
 import ProtectedAuth from './components/layout/auth/ProtectedAuth'
 import Cart from './components/layout/card/Cart'
 import SingUp from './pages/SingUp'
+import Footer from './components/layout/Footer'
 
 function App() {
 
   return (
-    <section className='relative grid justify-items-center min-h-screen font-["yantramanav"] '>
+    <section className='relative bg-gray-100 grid justify-items-center min-h-screen font-["yantramanav"] '>
 
       <Header/>
 
@@ -39,6 +40,7 @@ function App() {
 
       </Routes>
       <Cart/>
+      <Footer/>
     </section>
   )
 }

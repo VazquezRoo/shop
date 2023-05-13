@@ -145,7 +145,7 @@ function Home() {
 
 
   return (
-    <main  className='p-2 mt-[120px] flex flex-col justify-center items-center min-[990px]:flex-row relative'>
+    <main  className='bg-white p-2 pt-[120px] flex flex-col justify-center items-center min-[990px]:flex-row relative'>
 
         {/* Input y buttom para la busqueda */}
 
